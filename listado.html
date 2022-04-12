@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Tienda de ropa con carrito - Proyecto para Coderhouse">
+        <meta name="author" content="Valentina Sartorelli">
+        <title>We Byte</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">    
+        <link href="https://fonts.google.com/icons?selected=Material%20Icons%20Outlined%3Asearch" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+        <link rel="stylesheet" href="css/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+
+    <body>
+        <header>
+            <div class="color-top">
+                <div class="container d-flex">
+                    <div class="copy-header">
+                        <marquee scrolldelay=200>
+                            6 cuotas sin interes - Envios gratis a partir de $5000
+                        </marquee>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Ayuda </a></li>
+                            <li>|</li>
+                            <li><a href="users/login"> Iniciar Sesión </a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="cont-logo-xs">
+                <a href="/">
+                    <img src="images/logo-weByte.png" alt="" class="logo header-logo-xs">
+                </a>
+            </div>
+
+            <!-- Menu mobile -->
+            <div class="header-top-bar">
+                <!-- / burguer menu -->
+                <nav role="navigation">
+                    <div id="menuToggle">
+                        <input type="checkbox" />
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    
+                        <ul id="menu">
+                            <a href="index.html"><li><img src="images/logo-weByte.png" alt="" style="width: 55px; text-align: left;"></li></a>
+                            <a href="listado-h.html"><li>Hombres</li></a>
+                            <a href="listado-m.html"><li>Mujeres</li></a>
+                            <a href="listado-n.html"><li>Niños</li></a>
+                            <a href="listado.html"><li>Ver todo</li></a>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- / burguer menu -->
+        
+                <div class="header-logo">
+                    <a href="index.html">
+                        <img src="images/logo-weByte.png" alt="" class="logo">
+                    </a>
+                </div>
+
+                <nav class="main-navbar">
+                    <ul>
+                        <li>
+                            <a href="/users/add" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Registrate">
+                                <i class="fas fa-user"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="carrito.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Carrito">
+                                <i class="fas fa-shopping-bag"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- Fin Menu mobile -->
+
+            <!-- Menu desktop -->
+            <div class="header-top-bar-desktop">
+                <div class="container d-flex">
+                    <div class="header-logo-desk">
+                        <a href="index.html">
+                            <img src="images/logo-weByte.png" alt="" class="logo">
+                        </a>
+                    </div>
+                    <nav class="main-navbar-left">
+                        <ul>
+                            <li><a href="listado-h.html">Hombres</a></li>
+                            <li>|</li>
+                            <li><a href="listado-m.html">Mujeres</a></li>
+                            <li>|</li>
+                            <li><a href="listado-n.html">Niños</a></li>
+                            <li>|</li>
+                            <li><a href="listado.html">Ver todo</a></li>
+                            <li>|</li>
+                        </ul>
+                    </nav>
+                    <nav class="main-navbar">
+                        <ul>
+                            <li>
+                                <a href="/users/add" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Registrate">
+                                    <i class="fas fa-user"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="carrito.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Carrito">
+                                    <i class="fas fa-shopping-bag"></i>
+                                </a>
+                            </li>
+                        </ul> 
+                    </nav>
+                </div>
+            </div>
+        </header>
+        
+        <main id="pd_main-container">
+            <div class="container">
+                <div class="link-ruta">
+                    <nav>
+                        <ul>
+                            <li>></li>
+                            <li><a href="index.html"><strong>Atras</strong></a></li>
+                            <li>/</li>
+                            <li><a href="#">Indumentaria</a></li>   
+                        </ul>
+                    </nav>
+                </div>
+                <div class="pd_tit-categoria">Indumentaria</div>
+            </div>
+
+            <section id="pd_listado-products" >
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <article>
+                                <a href="detalle-prod1.html"> 
+                                    <img src="images/art1.jpg" alt="Buzo con capucha" class="pd_img-list">
+                                </a>
+                                <div class="pd_main-article">
+                                    <p class="pd_categoria">Hombre</p>
+                                    <p class="pd_descripciones">
+                                        <a href="detalle-prod1.html">Buzo con capucha</a>
+                                    </p>
+                                    <p class="pd_precios">$9000</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <article>
+                                <a href="detalle-prod2.html"> 
+                                    <img src="images/art2.jpg" alt="Jogging" class="pd_img-list">
+                                </a>
+                                <div class="pd_main-article">
+                                    <p class="pd_categoria">Hombre</p>
+                                    <p class="pd_descripciones">
+                                        <a href="detalle-prod2.html">Jogging</a>
+                                    </p>
+                                    <p class="pd_precios">$8500</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <article>
+                                <a href="detalle-prod3.html"> 
+                                    <img src="images/art3.jpg" alt="Zapatillas deportivas" class="pd_img-list">
+                                </a>
+                                <div class="pd_main-article">
+                                    <p class="pd_categoria">Hombre</p>
+                                    <p class="pd_descripciones">
+                                        <a href="detalle-prod3.html">Zapatillas deportivas</a>
+                                    </p>
+                                    <p class="pd_precios">$12000</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <article>
+                                <a href="detalle-prod4.html"> 
+                                    <img src="images/art4.jpg" alt="Remera algodon" class="pd_img-list">
+                                </a>
+                                <div class="pd_main-article">
+                                    <p class="pd_categoria">Hombre</p>
+                                    <p class="pd_descripciones">
+                                        <a href="detalle-prod4.html">Remera algodon</a>
+                                    </p>
+                                    <p class="pd_precios">$1600</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <article>
+                                <a href="detalle-prod5.html"> 
+                                    <img src="images/detalle-producto1.jpg" alt="Remera Star Wars" class="pd_img-list">
+                                </a>
+                                <div class="pd_main-article">
+                                    <p class="pd_categoria">Hombre</p>
+                                    <p class="pd_descripciones">
+                                        <a href="detalle-prod5.html">Remera Star Wars</a>
+                                    </p>
+                                    <p class="pd_precios">$1900</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <article>
+                                <a href="detalle-prod6.html"> 
+                                    <img src="images/detalle-producto2.jpg" alt="Remera roja" class="pd_img-list">
+                                </a>
+                                <div class="pd_main-article">
+                                    <p class="pd_categoria">Hombre</p>
+                                    <p class="pd_descripciones">
+                                        <a href="detalle-prod6.html">Remera roja</a>
+                                    </p>
+                                    <p class="pd_precios">$1420</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <article>
+                                <a href="detalle-prod7.html"> 
+                                    <img src="images/detalle-producto3.jpg" alt="Remera blanca" class="pd_img-list">
+                                </a>
+                                <div class="pd_main-article">
+                                    <p class="pd_categoria">Hombre</p>
+                                    <p class="pd_descripciones">
+                                        <a href="detalle-prod7.html">Remera blanca</a>
+                                    </p>
+                                    <p class="pd_precios">$1630</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <article>
+                                <a href="detalle-prod8.html"> 
+                                    <img src="images/detalle-producto4.jpg" alt="Remera azul" class="pd_img-list">
+                                </a>
+                                <div class="pd_main-article">
+                                    <p class="pd_categoria">Hombre</p>
+                                    <p class="pd_descripciones">
+                                        <a href="detalle-prod8.html">Remera azul</a>
+                                    </p>
+                                    <p class="pd_precios">$1200</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <article>
+                                <a href="detalle-prod9.html"> 
+                                    <img src="images/prod1.jpg" alt="Remera Salmon" class="pd_img-list">
+                                </a>
+                                <div class="pd_main-article">
+                                    <p class="pd_categoria">Mujer</p>
+                                    <p class="pd_descripciones">
+                                        <a href="detalle-prod9.html">Remera Salmon</a>
+                                    </p>
+                                    <p class="pd_precios">$2500</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <article>
+                                <a href="detalle-prod10.html"> 
+                                    <img src="images/prod2.jpg" alt="Remera Logo" class="pd_img-list">
+                                </a>
+                                <div class="pd_main-article">
+                                    <p class="pd_categoria">Mujer</p>
+                                    <p class="pd_descripciones">
+                                        <a href="detalle-prod10.html">Remera Logo</a>
+                                    </p>
+                                    <p class="pd_precios">$2700</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <article>
+                                <a href="detalle-prod11.html"> 
+                                    <img src="images/prod3.jpg" alt="Remera estampada" class="pd_img-list">
+                                </a>
+                                <div class="pd_main-article">
+                                    <p class="pd_categoria">Mujer</p>
+                                    <p class="pd_descripciones">
+                                        <a href="detalle-prod11.html">Remera estampada</a>
+                                    </p>
+                                    <p class="pd_precios">$1750</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <article>
+                                <a href="detalle-prod12.html"> 
+                                    <img src="images/prod4.jpg" alt="Calza ciclista" class="pd_img-list">
+                                </a>
+                                <div class="pd_main-article">
+                                    <p class="pd_categoria">Mujer</p>
+                                    <p class="pd_descripciones">
+                                        <a href="detalle-prod12.html">Calza ciclista</a>
+                                    </p>
+                                    <p class="pd_precios">$2720</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <article>
+                                <a href="detalle-prod13.html"> 
+                                    <img src="images/prod5.jpg" alt="Remera algodon" class="pd_img-list">
+                                </a>
+                                <div class="pd_main-article">
+                                    <p class="pd_categoria">Mujer</p>
+                                    <p class="pd_descripciones">
+                                        <a href="detalle-prod13.html">Remera algodon</a>
+                                    </p>
+                                    <p class="pd_precios">$1900</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <article>
+                                <a href="detalle-prod14.html"> 
+                                    <img src="images/prod6.jpeg" alt="Buzo Mickey" class="pd_img-list">
+                                </a>
+                                <div class="pd_main-article">
+                                    <p class="pd_categoria">Mujer</p>
+                                    <p class="pd_descripciones">
+                                        <a href="detalle-prod14.html">Buzo Mickey</a>
+                                    </p>
+                                    <p class="pd_precios">$15000</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <article>
+                                <a href="detalle-prod15.html"> 
+                                    <img src="images/prod7.jpg" alt="Campera estampada" class="pd_img-list">
+                                </a>
+                                <div class="pd_main-article">
+                                    <p class="pd_categoria">Mujer</p>
+                                    <p class="pd_descripciones">
+                                        <a href="detalle-prod15.html">Campera estampada</a>
+                                    </p>
+                                    <p class="pd_precios">$15630</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <article>
+                                <a href="detalle-prod16.html"> 
+                                    <img src="images/prod8.jpg" alt="Pantalon deportivo rosa" class="pd_img-list">
+                                </a>
+                                <div class="pd_main-article">
+                                    <p class="pd_categoria">Mujer</p>
+                                    <p class="pd_descripciones">
+                                        <a href="detalle-prod16.html">Pantalon deportivo rosa</a>
+                                    </p>
+                                    <p class="pd_precios">$6500</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <article>
+                                <a href="detalle-prod17.html"> 
+                                    <img src="images/prod9.jpg" alt="Zapatillas Mickey" class="pd_img-list">
+                                </a>
+                                <div class="pd_main-article">
+                                    <p class="pd_categoria">Niños</p>
+                                    <p class="pd_descripciones">
+                                        <a href="detalle-prod17.html">Zapatillas Mickey</a>
+                                    </p>
+                                    <p class="pd_precios">$10000</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <article>
+                                <a href="detalle-prod18.html"> 
+                                    <img src="images/prod10.jpg" alt="Buzo Minnie" class="pd_img-list">
+                                </a>
+                                <div class="pd_main-article">
+                                    <p class="pd_categoria">Niños</p>
+                                    <p class="pd_descripciones">
+                                        <a href="detalle-prod18.html">Buzo Minnie</a>
+                                    </p>
+                                    <p class="pd_precios">$9800</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <article>
+                                <a href="detalle-prod19.html"> 
+                                    <img src="images/prod11.jpg" alt="Zapatillas manos Mickey" class="pd_img-list">
+                                </a>
+                                <div class="pd_main-article">
+                                    <p class="pd_categoria">Niños</p>
+                                    <p class="pd_descripciones">
+                                        <a href="detalle-prod19.html">Zapatillas manos Mickey</a>
+                                    </p>
+                                    <p class="pd_precios">$10230</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <article>
+                                <a href="detalle-prod20.html"> 
+                                    <img src="images/prod12.jpg" alt="Remera logo negra" class="pd_img-list">
+                                </a>
+                                <div class="pd_main-article">
+                                    <p class="pd_categoria">Niños</p>
+                                    <p class="pd_descripciones">
+                                        <a href="detalle-prod20.html">Remera logo negra</a>
+                                    </p>
+                                    <p class="pd_precios">$5900</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <article>
+                                <a href="detalle-prod21.html"> 
+                                    <img src="images/prod13.jpg" alt="Conjunto Mickey" class="pd_img-list">
+                                </a>
+                                <div class="pd_main-article">
+                                    <p class="pd_categoria">Niños</p>
+                                    <p class="pd_descripciones">
+                                        <a href="detalle-prod21.html">Conjunto Mickey</a>
+                                    </p>
+                                    <p class="pd_precios">$25000</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <article>
+                                <a href="detalle-prod22.html"> 
+                                    <img src="images/prod14.jpg" alt="Buzo logo rosa" class="pd_img-list">
+                                </a>
+                                <div class="pd_main-article">
+                                    <p class="pd_categoria">Niños</p>
+                                    <p class="pd_descripciones">
+                                        <a href="detalle-prod22.html">Buzo logo rosa</a>
+                                    </p>
+                                    <p class="pd_precios">$12400</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <article>
+                                <a href="detalle-prod23.html"> 
+                                    <img src="images/prod15.jpg" alt="Mochila escolar" class="pd_img-list">
+                                </a>
+                                <div class="pd_main-article">
+                                    <p class="pd_categoria">Niños</p>
+                                    <p class="pd_descripciones">
+                                        <a href="detalle-prod23.html">Mochila escolar</a>
+                                    </p>
+                                    <p class="pd_precios">$13600</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3">
+                            <article>
+                                <a href="detalle-prod24.html"> 
+                                    <img src="images/prod16.jpg" alt="Remera logo azul" class="pd_img-list">
+                                </a>
+                                <div class="pd_main-article">
+                                    <p class="pd_categoria">Niños</p>
+                                    <p class="pd_descripciones">
+                                        <a href="detalle-prod24.html">Remera logo azul</a>
+                                    </p>
+                                    <p class="pd_precios">$3000</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+            <div id="pd_newsletter">
+                <div class="container d-flex">
+                    <div class="pd_text-news">
+                        <h6>Suscribite</h6>
+                        <p clas>Recibí nuestras novedades y Obtené descuentos!!</p>
+                    </div>
+                    <button type="button" class="pd_gl-cta pd_gl-cta--primary">
+                        <span class="pd_gl-cta__content">Suscribirse</span>
+                    </button>
+                </div>
+            </div>
+
+            <div id="footer-pre">
+                <div class="pd_icon-service">
+                    <div class="pd_icon"><i class="pe-7s-car"></i></div>
+                    <div class="pd_icontext">
+                     <h6>ENVÍOS A TODO EL PAÍS</h6>
+                     <p>Llegamos con nuestros productos a todo el país.</p>
+                    </div>
+                </div>
+                <div class="pd_icon-service">
+                   <div class="pd_icon"><i class="pe-7s-help2"></i></div>
+                        <div class="pd_icontext">
+                         <h6>SOPORTE 24/7</h6>
+                         <p>Contactanos las 24 horas, los 7 días de la semana.</p>
+                    </div>
+                </div>
+                <div class="pd_icon-service">
+                    <div class="pd_icon"><i class="pe-7s-refresh"></i></div>
+                    <div class="pd_icontext">
+                        <h6>30 DÍAS PARA CAMBIOS</h6>
+                        <p>Podes cambiar tus prendas sin problemas por 30 días.</p>
+                        </div>
+                </div>
+                <div class="pd_icon-service">
+                  <div class="pd_icon"><i class="pe-7s-door-lock"></i></div>
+                    <div class="pd_icontext">
+                        <h6>PAGOS 100% SEGUROS</h6>
+                        <p>Aseguramos tu pago a través de la plataforma de MercadoPago.</p>
+                        </div>
+                </div>
+            </div>
+        </main>
+
+        
+        
+        <footer>
+            <section>
+                <div class="container lgrey">
+                    <div class="ico-contactenos">
+                        <a href="https://api.whatsapp.com/send?phone=5493416123456&text=Me contacto desde la web" target="_blank">
+                            <img src="images/ico-contacto.png" alt="" >
+                        </a>
+                    </div>
+                    <div class="logo-footer">
+                        <a href="index.html">
+                            <img src="images/logo-weByte.png" alt="WeByte Indumentaria deportiva" class="logo-xs"> 
+                        </a>
+                    </div>
+                    <nav class="main-navbar-bottom">
+                        <ul>
+                            <li><a href="listado-h.html">Hombre </a></li>
+                            <li>|</li>
+                            <li><a href="listado-m.html">Mujer </a></li>
+                            <li>|</li>
+                            <li><a href="listado-n.html">Niños </a></li>
+                            <li>|</li>
+                            <li><a href="listado.html">Todos </a></li>
+                            <li>|</li>
+                            <li><a href="#">Como comprar </a></li>
+                            <li>|</li>
+                            <li><a href="#">Contactenos </a></li>
+                            <li>|</li>
+                        </ul>
+                    </nav>
+                    <nav class="main-navbar-social">
+                        <ul>
+                            <li class="ico-network">
+                                <a href="https://www.instagram.com/">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li class="ico-network">
+                                <a href="https://www.facebook.com/">
+                                    <i class="fab fa-facebook-square"></i>
+                                </a>
+                            </li>
+                            <li class="ico-network">
+                                <a href="https://www.youtube.com/">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </li>
+                            <li class="ico-network">
+                                <a href="https://www.twitter.com/">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="color-bottom dgrey">
+                    <div class="container d-flex">
+                        <p>Av Siempre Viva 742 - Springfield - 341 123 456</p>
+                        <p>Copyright 2021 - Todos los derechos reservados</p>
+                    </div>
+                </div>
+            </section>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+        <script>
+          var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+          var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+          return new bootstrap.Tooltip(tooltipTriggerEl)
+          })
+        </script>
+    </body>
+</html>
